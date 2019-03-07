@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package domains.farmer;
 
 import framework.problem.State;
@@ -97,18 +92,4 @@ public class FarmerState implements State{
         
         return chck.toString();
     }
-    /**
-    public String Fstring(){
-        if (this.farmer == )
-            return "West";
-        else return "East";
-    }
-    
-    public String Wstring(){
-        if (this.wolf == Side.WEST)
-            return "West";
-        else return "East";
-    }
-*/
 }
-    

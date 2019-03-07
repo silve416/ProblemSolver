@@ -18,15 +18,31 @@ public class PuzzleMoverTest {
     
     private final State start;
     private final Mover mover;
-    private final String slide1, slide2, slide3, slide4,  // move names
-	                 slide5, slide6, slide7, slide8;
+    //private final String slide1, slide2, slide3, slide4,  // move names
+      //          slide5, slide6, slide7, slide8;
+    String TILE_1 = "SLIDE TILE 1";
+    String TILE_2 = "SLIDE TILE 2";
+    String TILE_3 = "SLIDE TILE 3";
+    String TILE_4 = "SLIDE TILE 4";
+    String TILE_5 = "SLIDE TILE 5";
+    String TILE_6 = "SLIDE TILE 6";
+    String TILE_7 = "SLIDE TILE 7";
+    String TILE_8 = "SLIDE TILE 8";
     
     public PuzzleMoverTest() {
+        int[][] array = new int[3][3];
+        array[0][0] = 1;
+        array[0][1] = 2;
+        array[0][2] = 3;
+        array[1][0] = 8;
+        array[1][1] = 0;
+        array[1][2] = 4;
+        array[2][0] = 7;
+        array[2][1] = 6;
+        array[2][2] = 5;
         
-        /**
-         * Initialize instance fields here
-         */
-        
+        start = new PuzzleState(array);       
+        mover = new PuzzleMover();
     }
     
     /**
@@ -35,50 +51,93 @@ public class PuzzleMoverTest {
 
     @Test
     public void testSlide1() {
-        /**
-         * For example, if mover, start, and slide1 have been
-         * initialized, call:
-         *
-         *     mover.doMove(slide1, start)
-         *
-         * and test the result with assertions.
-         */
-        fail("The test case has not been implemented.");
+        assertEquals(mover.slide(TILE_1, start), null);        
     }
 
     @Test
     public void testSlide2() {
-        fail("The test case has not been implemented.");        
+        int[][] array = new int[3][3];
+        array[0][0] = 1;
+        array[0][1] = 0;
+        array[0][2] = 3;
+        array[1][0] = 8;
+        array[1][1] = 2;
+        array[1][2] = 4;
+        array[2][0] = 7;
+        array[2][1] = 6;
+        array[2][2] = 5;
+        
+        State end = new PuzzleState(array);
+        
+        assertEquals(mover.slide(TILE_2, start), end);    
     }
 
     @Test
     public void testSlide3() {
-        fail("The test case has not been implemented.");        
+        assertEquals(mover.slide(TILE_3, start), null);        
     }
 
     @Test
     public void testSlide4() {
-        fail("The test case has not been implemented.");        
+        int[][] array = new int[3][3];
+        array[0][0] = 1;
+        array[0][1] = 2;
+        array[0][2] = 3;
+        array[1][0] = 8;
+        array[1][1] = 4;
+        array[1][2] = 0;
+        array[2][0] = 7;
+        array[2][1] = 6;
+        array[2][2] = 5;
+        
+        State end = new PuzzleState(array);
+        assertEquals(mover.slide(TILE_4, start), end);       
     }
 
     @Test
     public void testSlide5() {
-        fail("The test case has not been implemented.");        
+        assertEquals(mover.slide(TILE_5, start), null);        
     }
 
     @Test
     public void testSlide6() {
-        fail("The test case has not been implemented.");        
+        int[][] array = new int[3][3];
+        array[0][0] = 1;
+        array[0][1] = 2;
+        array[0][2] = 3;
+        array[1][0] = 8;
+        array[1][1] = 6;
+        array[1][2] = 4;
+        array[2][0] = 7;
+        array[2][1] = 0;
+        array[2][2] = 5;
+        
+        State end = new PuzzleState(array);
+        
+        assertEquals(mover.slide(TILE_6, start), end);        
     }
 
     @Test
     public void testSlide7() {
-        fail("The test case has not been implemented.");        
+        assertEquals(mover.slide(TILE_7, start), null);        
     }
 
     @Test
     public void testSlide8() {
-        fail("The test case has not been implemented.");        
+        int[][] array = new int[3][3];
+        array[0][0] = 1;
+        array[0][1] = 2;
+        array[0][2] = 3;
+        array[1][0] = 0;
+        array[1][1] = 8;
+        array[1][2] = 4;
+        array[2][0] = 7;
+        array[2][1] = 6;
+        array[2][2] = 5;
+        
+        State end = new PuzzleState(array);
+        
+        assertEquals(mover.slide(TILE_8, start), end);        
     }
     
 }

@@ -1,14 +1,17 @@
 package domains.puzzle;
 
 import framework.problem.Problem;
-
+/**
+ *
+ * @author Maxwell
+ */
 public class PuzzleProblem
   extends Problem
 {
   public PuzzleProblem()
   {
     super.setName("8-Puzzle");
-    super.setMover(new PuzzleMover(3, 3));
+    super.setMover(new PuzzleMover());
     super.setIntroduction(INTRO);
     super.setInitialState(START);
     super.setCurrentState(START);

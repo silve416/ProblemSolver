@@ -36,7 +36,7 @@ public class FarmerMoverTest {
     
     private Message tryName(String moveName) {
         try {
-            next = mover.doMove(moveName, new FarmerState("West", "West", "West", "West"));
+            next = mover.slide(moveName, new FarmerState("West", "West", "West", "West"));
         }
         catch(Exception ex) {
             return Message.EXCEPTION_OCCURRED;
@@ -89,7 +89,7 @@ public class FarmerMoverTest {
     }
     
     private void doMoveIllegal(String m, String f, String w, String g, String c) {
-        next = mover.doMove(m, new FarmerState(f, w, g, c));
+        next = mover.slide(m, new FarmerState(f, w, g, c));
         assertTrue(next == null);
     }
     
@@ -97,7 +97,7 @@ public class FarmerMoverTest {
                                        String fNext, String wNext, String gNext, String cNext) {
         FarmerState curr = new FarmerState(fCurr, wCurr, gCurr, cCurr);
         FarmerState copy = new FarmerState(fCurr, wCurr, gCurr, cCurr);
-        next = mover.doMove(m, curr);
+        next = mover.slide(m, curr);
         assertTrue(next != null);
         assertTrue(((FarmerState)next).equals(new FarmerState(fNext, wNext, gNext, cNext)));
         assertTrue(curr.equals(copy));

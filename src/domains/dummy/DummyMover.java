@@ -2,7 +2,10 @@ package domains.dummy;
 
 import framework.problem.Mover;
 import framework.problem.State;
-
+/**
+ *
+ * @author Maxwell
+ */
 public class DummyMover extends Mover {
 
         public static final String BEAM = "Beam Me Up";

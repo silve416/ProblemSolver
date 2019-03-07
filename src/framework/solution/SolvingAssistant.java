@@ -33,7 +33,7 @@ public class SolvingAssistant {
      */
     public void tryMove(String move) {
         moveLegal = true;
-        State next = mover.doMove(move, problem.getCurrentState());
+        State next = mover.slide(move, problem.getCurrentState());
         if (next != null) {
             update(next);
         }

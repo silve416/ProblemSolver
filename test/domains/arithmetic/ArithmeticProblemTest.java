@@ -69,7 +69,7 @@ public class ArithmeticProblemTest {
     }
     
     private void tryMove(String move) {
-        State next = mover.doMove(move, problem.getCurrentState());
+        State next = mover.slide(move, problem.getCurrentState());
         assertTrue(next != null);
         problem.setCurrentState(next);
         display(problem.getCurrentState());

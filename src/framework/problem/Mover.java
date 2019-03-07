@@ -56,7 +56,7 @@ public abstract class Mover {
      * @return the result of applying the move name's associated
      * function on the given state
      */
-    public State doMove(String moveName, State state) {
+    public State slide(String moveName, State state) {
         UnaryOperator<State> function = moveMap.get(moveName);
         if ( function == null ) {
             throw new RuntimeException("Bad move name: " + moveName);

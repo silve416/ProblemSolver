@@ -1,7 +1,10 @@
 package domains.dummy;
 
 import framework.problem.Problem;
-
+/**
+ *
+ * @author Maxwell
+ */
 public class DummyProblem extends Problem {
     
         public DummyProblem() {

@@ -2,7 +2,10 @@ package domains.dummy;
 
 import framework.problem.State;
 import java.util.stream.Stream;
-
+/**
+ *
+ * @author Maxwell
+ */
 public class DummyState implements State {
     
         public DummyState(String contents) {

@@ -21,16 +21,16 @@ public class ArithmeticMoverTest {
 
     @Test
     public void testMoves() {
-        State next = mover.doMove("Add 3", state);
+        State next = mover.slide("Add 3", state);
         assertTrue(next.equals(new ArithmeticState(9)));
         
-        next = mover.doMove("Subtract 5", next);
+        next = mover.slide("Subtract 5", next);
         assertTrue(next.equals(new ArithmeticState(4)));
         
-        next = mover.doMove("Multiply by 2", next);
+        next = mover.slide("Multiply by 2", next);
         assertTrue(next.equals(new ArithmeticState(8)));
         
-        next = mover.doMove("Divide by 2", next);
+        next = mover.slide("Divide by 2", next);
         assertTrue(next.equals(new ArithmeticState(4)));
     }
     
